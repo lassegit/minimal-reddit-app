@@ -12,8 +12,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route path="/" component={Home} exact />
         <Route path="/r/:id" component={Posts} />
+        <Route path="*" component={Home} />
       </Switch>
     </Router>
     <GlobalStyles />
