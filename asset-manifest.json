@@ -1,11 +1,11 @@
 {
-  "main.js": "http://lasse.tech/richtiges-reddit/static/js/main.fb7e1845.chunk.js",
-  "main.js.map": "http://lasse.tech/richtiges-reddit/static/js/main.fb7e1845.chunk.js.map",
-  "static/js/1.964862f7.chunk.js": "http://lasse.tech/richtiges-reddit/static/js/1.964862f7.chunk.js",
-  "static/js/1.964862f7.chunk.js.map": "http://lasse.tech/richtiges-reddit/static/js/1.964862f7.chunk.js.map",
-  "runtime~main.js": "http://lasse.tech/richtiges-reddit/static/js/runtime~main.3d3cc1f6.js",
-  "runtime~main.js.map": "http://lasse.tech/richtiges-reddit/static/js/runtime~main.3d3cc1f6.js.map",
-  "index.html": "http://lasse.tech/richtiges-reddit/index.html",
-  "precache-manifest.221b98e7d1f89f8da04cff85d8c8fa06.js": "http://lasse.tech/richtiges-reddit/precache-manifest.221b98e7d1f89f8da04cff85d8c8fa06.js",
-  "service-worker.js": "http://lasse.tech/richtiges-reddit/service-worker.js"
+  "main.js": "/richtiges-reddit/static/js/main.9466987d.chunk.js",
+  "main.js.map": "/richtiges-reddit/static/js/main.9466987d.chunk.js.map",
+  "static/js/1.8b70d34b.chunk.js": "/richtiges-reddit/static/js/1.8b70d34b.chunk.js",
+  "static/js/1.8b70d34b.chunk.js.map": "/richtiges-reddit/static/js/1.8b70d34b.chunk.js.map",
+  "runtime~main.js": "/richtiges-reddit/static/js/runtime~main.e3b90939.js",
+  "runtime~main.js.map": "/richtiges-reddit/static/js/runtime~main.e3b90939.js.map",
+  "index.html": "/richtiges-reddit/index.html",
+  "precache-manifest.29e68bdce957f5bbd4741e4d40962d98.js": "/richtiges-reddit/precache-manifest.29e68bdce957f5bbd4741e4d40962d98.js",
+  "service-worker.js": "/richtiges-reddit/service-worker.js"
 }
