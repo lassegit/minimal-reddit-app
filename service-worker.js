@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/richtiges-reddit/precache-manifest.c88df1c12d63d01f76124f343bc597a5.js"
+  "http://lasse.tech/richtiges-reddit/precache-manifest.221b98e7d1f89f8da04cff85d8c8fa06.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/richtiges-reddit/index.html", {
+workbox.routing.registerNavigationRoute("http://lasse.tech/richtiges-reddit/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
