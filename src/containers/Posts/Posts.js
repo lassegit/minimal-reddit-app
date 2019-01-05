@@ -26,7 +26,7 @@ class Posts extends React.Component {
   }
 
   render() {
-    const { match, isLoading, posts, dispatch } = this.props;
+    const { match, isLoading, posts, dispatch, error } = this.props;
 
     return (
       <div>
@@ -42,6 +42,7 @@ class Posts extends React.Component {
                 /r/{match.params.id} <Button onClick={() => dispatch(removeSub(match.params.id))}>Remove</Button>
               </H3>
               <P>{isLoading && 'Loading'}</P>
+              <P>{error && error}</P>
               {!isLoading && posts.map((item, index) => <Post key={index} post={item.data} index={index} />)}
             </React.Fragment>
           }
@@ -51,11 +52,16 @@ class Posts extends React.Component {
   }
 }
 
+Posts.defaultProps = {
+  error: null,
+};
+
 Posts.propTypes = {
   dispatch: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
   match: PropTypes.shape({}).isRequired,
   posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 export default connect(state => ({

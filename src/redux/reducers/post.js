@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
     case POSTS_SUCCESS:
       return Object.assign({}, { posts: action.posts.data.children, isLoading: false });
     case POSTS_ERROR:
-      return Object.assign({}, { error: true, isLoading: false });
+      return Object.assign({}, { posts: [], error: action.err.message, isLoading: false });
     default:
       return state;
   }
