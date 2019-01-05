@@ -5,7 +5,9 @@ import { A } from '../Link';
 
 const Wrapper = styled.div`
   display: block;
-  margin: 10px 0;
+  margin: 15px 0;
+  padding: 15px 0;
+  border-bottom: 1px dashed #ddd;
 `;
 
 const Meta = styled.div`
@@ -26,8 +28,8 @@ const Post = ({ post, index }) => {
 
   return (
     <Wrapper>
-      <A href={url} target="_blank">
-        {index + 1}. {title}
+      <A href={url} target="_blank" large>
+        {index + 1}: {title}
       </A>{' '}
       <A href={`https://www.reddit.com/domain/${domain}/`}>
         <small>{domain}</small>

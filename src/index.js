@@ -13,7 +13,7 @@ ReactDOM.render(
     <HashRouter>
       <Switch>
         <Route path="/r/:id" component={Posts} />
-        <Route path="*" component={Home} />
+        <Route path="/" exact component={Home} />
       </Switch>
     </HashRouter>
     <GlobalStyles />

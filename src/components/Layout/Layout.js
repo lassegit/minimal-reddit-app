@@ -8,11 +8,11 @@ const Wrapper = styled.div`
 `;
 
 const Column1 = styled.div`
-  flex: 1;
+  flex: 0 1 200px;
 `;
 
 const Column2 = styled.div`
-  flex: 5;
+  flex: 0 1 700px;
 `;
 
 const Layout = ({ column1, column2 }) => (

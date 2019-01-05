@@ -11,7 +11,9 @@ class SubList extends React.Component {
       <ul>
         {sub.map((item, index) => (
           <li key={index}>
-            <Link to={`/r/${item}`}>{item}</Link>{' '}
+            <Link to={`/r/${item}`} large>
+              {item}
+            </Link>{' '}
           </li>
         ))}
       </ul>
