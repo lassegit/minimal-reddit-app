@@ -44,17 +44,17 @@ const Post = ({ post, index }) => {
       <UL>
         <LI>{createdAt}</LI>
         <LI>
-          <A href={`https://www.reddit.com${permalink}`} target="_blank">
+          <A href={`https://old.reddit.com${permalink}`} target="_blank">
             comments ({num_comments})
           </A>
         </LI>
         <LI>
-          <A href={`https://www.reddit.com/user/${author}`} target="_blank">
+          <A href={`https://old.reddit.com/user/${author}`} target="_blank">
             {author}
           </A>
         </LI>
         <LI>
-          <A href={`https://www.reddit.com/domain/${domain}/`}>{domain}</A>
+          <A href={`https://old.reddit.com/domain/${domain}/`}>{domain}</A>
         </LI>
       </UL>
     </Wrapper>
