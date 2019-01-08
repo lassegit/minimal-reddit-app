@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
@@ -17,17 +18,13 @@ const Meta = styled.div`
 `;
 
 const Post = ({ post, index }) => {
-  const { url, title, created_utc, domain, permalink, author } = post; // eslint-disable-line camelcase
-  // eslint-disable-next-line camelcase
-  const createdAt = new Date(created_utc * 1000).toLocaleDateString(
-    navigator.language || navigator.userLanguage,
-    {
-      weekday: 'long',
-      year: '2-digit',
-      month: 'short',
-      day: 'numeric',
-    },
-  );
+  const { url, title, created_utc, domain, permalink, author, num_comments } = post;
+  const createdAt = new Date(created_utc * 1000).toLocaleDateString(navigator.language || navigator.userLanguage, {
+    weekday: 'long',
+    year: '2-digit',
+    month: 'short',
+    day: 'numeric',
+  });
 
   return (
     <Wrapper>
@@ -38,7 +35,7 @@ const Post = ({ post, index }) => {
         <small>{domain}</small>
       </A>
       <Meta>
-        {createdAt} <A href={`https://www.reddit.com${permalink}`}>comments</A>{' '}
+        {createdAt} <A href={`https://www.reddit.com${permalink}`}>comments ({num_comments})</A>{' '}
         <A href={`https://www.reddit.com/user/${author}`}>{author}</A>{' '}
       </Meta>
     </Wrapper>
