@@ -1,8 +1,8 @@
 {
-  "name": "richtiges-reddit",
+  "name": "minimal-reddit-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lassegit.github.io/richtiges-reddit",
+  "homepage": "https://lassegit.github.io/minimal-reddit-app",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
