@@ -12,6 +12,7 @@ const Column1 = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 10px;
+  left: 10px;
 `;
 
 const Column2 = styled.div`
