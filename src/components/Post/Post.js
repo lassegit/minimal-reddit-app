@@ -24,17 +24,14 @@ const LI = styled.li`
   margin-right: 10px;
 `;
 
-const Post = ({ post, index }) => {
+const Post = ({ post }) => {
   const { url, title, created_utc, domain, permalink, author, num_comments } = post;
-  const createdAt = new Date(created_utc * 1000).toLocaleDateString(
-    navigator.language || navigator.userLanguage,
-    {
-      weekday: 'long',
-      year: '2-digit',
-      month: 'short',
-      day: 'numeric',
-    },
-  );
+  const createdAt = new Date(created_utc * 1000).toLocaleDateString(navigator.language || navigator.userLanguage, {
+    weekday: 'long',
+    year: '2-digit',
+    month: 'short',
+    day: 'numeric',
+  });
 
   return (
     <Wrapper>
@@ -70,7 +67,6 @@ Post.propTypes = {
     author: PropTypes.string,
     permalink: PropTypes.string,
   }).isRequired,
-  index: PropTypes.number.isRequired,
 };
 
 export default Post;

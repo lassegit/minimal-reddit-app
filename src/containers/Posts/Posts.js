@@ -43,7 +43,7 @@ class Posts extends React.Component {
               </H3>
               <P>{isLoading && 'Loading'}</P>
               <P>{error && error}</P>
-              {!isLoading && posts.map((item, index) => <Post key={index} post={item.data} index={index} />)}
+              {!isLoading && posts.map((item, index) => <Post key={index} post={item.data} />)}
             </React.Fragment>
           }
         />
