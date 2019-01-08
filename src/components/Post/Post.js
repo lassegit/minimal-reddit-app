@@ -26,18 +26,21 @@ const LI = styled.li`
 
 const Post = ({ post, index }) => {
   const { url, title, created_utc, domain, permalink, author, num_comments } = post;
-  const createdAt = new Date(created_utc * 1000).toLocaleDateString(navigator.language || navigator.userLanguage, {
-    weekday: 'long',
-    year: '2-digit',
-    month: 'short',
-    day: 'numeric',
-  });
+  const createdAt = new Date(created_utc * 1000).toLocaleDateString(
+    navigator.language || navigator.userLanguage,
+    {
+      weekday: 'long',
+      year: '2-digit',
+      month: 'short',
+      day: 'numeric',
+    },
+  );
 
   return (
     <Wrapper>
       <A href={url} target="_blank" large>
-        {index + 1}: {title}
-      </A>{' '}
+        {title}
+      </A>
       <UL>
         <LI>{createdAt}</LI>
         <LI>
