@@ -1,11 +1,11 @@
 {
-  "main.js": "/richtiges-reddit/static/js/main.f6858e2a.chunk.js",
-  "main.js.map": "/richtiges-reddit/static/js/main.f6858e2a.chunk.js.map",
-  "static/js/1.1724437e.chunk.js": "/richtiges-reddit/static/js/1.1724437e.chunk.js",
-  "static/js/1.1724437e.chunk.js.map": "/richtiges-reddit/static/js/1.1724437e.chunk.js.map",
-  "runtime~main.js": "/richtiges-reddit/static/js/runtime~main.e3b90939.js",
-  "runtime~main.js.map": "/richtiges-reddit/static/js/runtime~main.e3b90939.js.map",
-  "index.html": "/richtiges-reddit/index.html",
-  "precache-manifest.8f051a283d8eaa41f89d7a5a1b601f83.js": "/richtiges-reddit/precache-manifest.8f051a283d8eaa41f89d7a5a1b601f83.js",
-  "service-worker.js": "/richtiges-reddit/service-worker.js"
+  "main.js": "/minimal-reddit-app/static/js/main.ed171eac.chunk.js",
+  "main.js.map": "/minimal-reddit-app/static/js/main.ed171eac.chunk.js.map",
+  "static/js/1.755ddcc8.chunk.js": "/minimal-reddit-app/static/js/1.755ddcc8.chunk.js",
+  "static/js/1.755ddcc8.chunk.js.map": "/minimal-reddit-app/static/js/1.755ddcc8.chunk.js.map",
+  "runtime~main.js": "/minimal-reddit-app/static/js/runtime~main.b721781e.js",
+  "runtime~main.js.map": "/minimal-reddit-app/static/js/runtime~main.b721781e.js.map",
+  "index.html": "/minimal-reddit-app/index.html",
+  "precache-manifest.9047b6b46c38cb55fadd7a389b13fb82.js": "/minimal-reddit-app/precache-manifest.9047b6b46c38cb55fadd7a389b13fb82.js",
+  "service-worker.js": "/minimal-reddit-app/service-worker.js"
 }
