@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import Comments from './containers/Comments';
 import GlobalStyles from './utils/GlobalStyles';
 import Home from './containers/Home';
 import Posts from './containers/Posts';
@@ -13,6 +14,7 @@ ReactDOM.render(
     <HashRouter>
       <Switch>
         <Route path="/r/:id" component={Posts} />
+        <Route path="/comments/:sub/:id" component={Comments} />
         <Route path="/" exact component={Home} />
       </Switch>
     </HashRouter>
