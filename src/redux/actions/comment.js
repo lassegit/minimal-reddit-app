@@ -4,7 +4,7 @@ import { REDDIT_URL } from '../../utils/constants';
 export const getComments = (sub, postId) => dispatch => {
   dispatch({ type: COMMENTS_REQUEST });
 
-  return fetch(`${REDDIT_URL}/${sub}/comments/${postId}/comments.json`)
+  return fetch(`${REDDIT_URL}/${sub}/comments/${postId}/comments.json?sort=top`)
     .then(res => {
       if (!res.ok) {
         throw new Error(`${res.status} error occured.`);
