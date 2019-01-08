@@ -19,12 +19,15 @@ const Meta = styled.div`
 const Post = ({ post, index }) => {
   const { url, title, created_utc, domain, permalink, author } = post; // eslint-disable-line camelcase
   // eslint-disable-next-line camelcase
-  const createdAt = new Date(created_utc * 1000).toLocaleDateString(navigator.language || navigator.userLanguage, {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const createdAt = new Date(created_utc * 1000).toLocaleDateString(
+    navigator.language || navigator.userLanguage,
+    {
+      weekday: 'long',
+      year: '2-digit',
+      month: 'short',
+      day: 'numeric',
+    },
+  );
 
   return (
     <Wrapper>
