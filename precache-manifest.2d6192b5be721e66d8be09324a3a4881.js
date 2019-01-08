@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/minimal-reddit-app/static/js/runtime~main.b721781e.js"
   },
   {
-    "revision": "3677de3d8dd48eed2eab",
-    "url": "/minimal-reddit-app/static/js/main.3677de3d.chunk.js"
+    "revision": "fd104d34bf12d373f91e",
+    "url": "/minimal-reddit-app/static/js/main.fd104d34.chunk.js"
   },
   {
     "revision": "755ddcc80d7c7d0f583d",
     "url": "/minimal-reddit-app/static/js/1.755ddcc8.chunk.js"
   },
   {
-    "revision": "5f89f629f1d28e242b97a24e33bf083e",
+    "revision": "53c2663564dcefdda8124634c64c4506",
     "url": "/minimal-reddit-app/index.html"
   }
 ];
