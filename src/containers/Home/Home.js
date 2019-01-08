@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 import Layout from '../../components/Layout';
+import P from '../../components/Paragraph';
 import SubAdd from '../SubAdd';
 import SubList from '../SubList';
 import { H1 } from '../../components/Heading';
@@ -26,7 +27,9 @@ export class Home extends React.Component {
           }
           column2={
             <React.Fragment>
-              <H1>Add your favorite subreddits.</H1>
+              <H1>Casually read the most popular posts on selected subreddits</H1>
+              <P>Only posts above a certain popularity are shown and then sorted by date.</P>
+              <P>Visited links are slighty darker.</P>
             </React.Fragment>
           }
         />
