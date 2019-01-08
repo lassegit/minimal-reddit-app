@@ -2,21 +2,31 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from '../../components/Link';
+import styled from 'styled-components';
+
+const UL = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const LI = styled.li`
+  margin: 0 0 5px 0;
+`;
 
 class SubList extends React.Component {
   render() {
     const { sub } = this.props;
 
     return (
-      <ul>
+      <UL>
         {sub.map((item, index) => (
-          <li key={index}>
+          <LI key={index}>
             <Link to={`/r/${item}`} large="true">
               {item}
             </Link>{' '}
-          </li>
+          </LI>
         ))}
-      </ul>
+      </UL>
     );
   }
 }
