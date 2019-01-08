@@ -11,10 +11,17 @@ const Wrapper = styled.div`
   border-bottom: 1px dashed #ddd;
 `;
 
-const Meta = styled.div`
-  display: block;
+const UL = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   margin: 5px 0;
   font-size: 12px;
+`;
+
+const LI = styled.li`
+  margin-right: 10px;
 `;
 
 const Post = ({ post, index }) => {
@@ -31,13 +38,22 @@ const Post = ({ post, index }) => {
       <A href={url} target="_blank" large>
         {index + 1}: {title}
       </A>{' '}
-      <A href={`https://www.reddit.com/domain/${domain}/`}>
-        <small>{domain}</small>
-      </A>
-      <Meta>
-        {createdAt} <A href={`https://www.reddit.com${permalink}`}>comments ({num_comments})</A>{' '}
-        <A href={`https://www.reddit.com/user/${author}`}>{author}</A>{' '}
-      </Meta>
+      <UL>
+        <LI>{createdAt}</LI>
+        <LI>
+          <A href={`https://www.reddit.com${permalink}`} target="_blank">
+            comments ({num_comments})
+          </A>
+        </LI>
+        <LI>
+          <A href={`https://www.reddit.com/user/${author}`} target="_blank">
+            {author}
+          </A>
+        </LI>
+        <LI>
+          <A href={`https://www.reddit.com/domain/${domain}/`}>{domain}</A>
+        </LI>
+      </UL>
     </Wrapper>
   );
 };
