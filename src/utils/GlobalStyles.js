@@ -5,6 +5,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     background: #292929;
     color: #f3f3f3;
+    margin: 0;
+    padding: 0;
   }
 `;
 export default GlobalStyles;

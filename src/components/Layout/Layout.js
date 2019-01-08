@@ -4,15 +4,19 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 0 0 50px 0;
 `;
 
 const Column1 = styled.div`
   flex: 0 1 200px;
+  height: 99vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
 `;
 
 const Column2 = styled.div`
   flex: 0 1 700px;
+  margin-bottom: 50px;
 `;
 
 const Layout = ({ column1, column2 }) => (
