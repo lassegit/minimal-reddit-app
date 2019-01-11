@@ -2,7 +2,7 @@ import { POSTS_ERROR, POSTS_REQUEST, POSTS_SUCCESS } from '../actionTypes';
 import { REDDIT_URL } from '../../utils/constants';
 
 export const getPosts = sub => dispatch => {
-  dispatch({ type: POSTS_REQUEST });
+  dispatch({ type: POSTS_REQUEST, sub });
 
   return fetch(`${REDDIT_URL}/${sub}/top.json?sort=top&t=week`)
     .then(res => {
@@ -12,6 +12,6 @@ export const getPosts = sub => dispatch => {
 
       return res.json();
     })
-    .then(posts => dispatch({ type: POSTS_SUCCESS, posts }))
-    .catch(err => dispatch({ type: POSTS_ERROR, err }));
+    .then(posts => dispatch({ type: POSTS_SUCCESS, posts, sub }))
+    .catch(err => dispatch({ type: POSTS_ERROR, err, sub }));
 };

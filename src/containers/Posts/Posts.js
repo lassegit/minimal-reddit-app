@@ -13,15 +13,20 @@ import { removeSub } from '../../redux/actions/sub';
 
 class Posts extends React.Component {
   componentDidMount() {
-    const { dispatch, match } = this.props;
-    dispatch(getPosts(match.params.id));
+    const { dispatch, match, sub } = this.props;
+    const { id } = match.params;
+
+    if (id !== sub) {
+      dispatch(getPosts(id));
+    }
   }
 
   componentDidUpdate(prevProps) {
-    const { dispatch, match } = this.props;
+    const { dispatch, match, sub } = this.props;
+    const { id } = match.params;
 
-    if (match.params.id !== prevProps.match.params.id) {
-      dispatch(getPosts(match.params.id));
+    if (id !== prevProps.match.params.id && id !== sub) {
+      dispatch(getPosts(id));
     }
   }
 
@@ -59,6 +64,7 @@ Posts.defaultProps = {
 Posts.propTypes = {
   dispatch: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
+  sub: PropTypes.string.isRequired,
   match: PropTypes.shape({}).isRequired,
   posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
@@ -66,6 +72,7 @@ Posts.propTypes = {
 
 export default connect(state => ({
   posts: state.post.posts,
+  sub: state.post.sub,
   isLoading: state.post.isLoading,
   error: state.post.error,
 }))(Posts);
