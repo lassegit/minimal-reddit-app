@@ -18,6 +18,7 @@ const Column1 = styled.div`
 const Column2 = styled.div`
   flex: 0 1 700px;
   margin-bottom: 50px;
+  min-height: 100vh;
 `;
 
 const Layout = ({ column1, column2 }) => (
