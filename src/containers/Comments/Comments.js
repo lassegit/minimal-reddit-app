@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Comment from '../../components/Comment';
 import Layout from '../../components/Layout';
@@ -11,19 +10,7 @@ import SubAdd from '../SubAdd';
 import SubList from '../SubList';
 import { getComments } from '../../redux/actions/comment';
 import { H3 } from '../../components/Heading';
-
-const Ul = styled.ul`
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin: 5px 0;
-  font-size: 12px;
-`;
-
-const Li = styled.li`
-  margin-right: 10px;
-`;
+import { Li, Ul } from './Comments.styles';
 
 class Comments extends React.Component {
   componentDidMount() {
