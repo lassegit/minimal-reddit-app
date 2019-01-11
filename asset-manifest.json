@@ -1,11 +1,11 @@
 {
-  "main.js": "/minimal-reddit-app/static/js/main.1518d739.chunk.js",
-  "main.js.map": "/minimal-reddit-app/static/js/main.1518d739.chunk.js.map",
+  "main.js": "/minimal-reddit-app/static/js/main.938c691d.chunk.js",
+  "main.js.map": "/minimal-reddit-app/static/js/main.938c691d.chunk.js.map",
   "static/js/1.755ddcc8.chunk.js": "/minimal-reddit-app/static/js/1.755ddcc8.chunk.js",
   "static/js/1.755ddcc8.chunk.js.map": "/minimal-reddit-app/static/js/1.755ddcc8.chunk.js.map",
   "runtime~main.js": "/minimal-reddit-app/static/js/runtime~main.b721781e.js",
   "runtime~main.js.map": "/minimal-reddit-app/static/js/runtime~main.b721781e.js.map",
   "index.html": "/minimal-reddit-app/index.html",
-  "precache-manifest.d31340976b6ba4a8d85daff23416bc86.js": "/minimal-reddit-app/precache-manifest.d31340976b6ba4a8d85daff23416bc86.js",
+  "precache-manifest.3cc8a273451f3d784a92ccc7f2838119.js": "/minimal-reddit-app/precache-manifest.3cc8a273451f3d784a92ccc7f2838119.js",
   "service-worker.js": "/minimal-reddit-app/service-worker.js"
 }
