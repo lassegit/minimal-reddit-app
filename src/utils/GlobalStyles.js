@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
     background: #292929;
     color: #f3f3f3;
     margin: 0;
-    padding: 0;
+    padding: 20px;
   }
 `;
 export default GlobalStyles;

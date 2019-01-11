@@ -5,18 +5,16 @@ const Wrapper = styled.div`
 `;
 
 const Column1 = styled.div`
-  flex: 0 1 200px;
-  height: 99vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px;
-  left: 10px;
+  width: 200px;
+  overflow: hidden;
+  position: fixed;
+  top: 25px;
+  left: 15px;
 `;
 
 const Column2 = styled.div`
   flex: 0 1 700px;
-  margin-bottom: 50px;
-  min-height: 100vh;
+  margin-left: 200px;
 `;
 
 export { Wrapper, Column1, Column2 };
