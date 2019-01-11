@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { Link } from '../../components/Link';
+import Link from '../../components/Link';
 
 const UL = styled.ul`
   list-style: none;

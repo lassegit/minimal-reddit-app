@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Comment from '../../components/Comment';
 import Layout from '../../components/Layout';
+import Link from '../../components/Link';
 import P from '../../components/Paragraph';
 import SubAdd from '../SubAdd';
 import SubList from '../SubList';
-import { A } from '../../components/Link';
 import { getComments } from '../../redux/actions/comment';
 import { H3 } from '../../components/Heading';
 
@@ -66,9 +66,9 @@ class Comments extends React.Component {
             <Ul>
               <Li>{num_comments} comments</Li>
               <Li>
-                <A href={`https://old.reddit.com/${permalink}`} target="_blank">
+                <Link href={`https://old.reddit.com/${permalink}`} target="_blank" type="a">
                   permalink
-                </A>
+                </Link>
               </Li>
             </Ul>
             {comments.map(comment => (

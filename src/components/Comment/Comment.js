@@ -1,38 +1,17 @@
-/* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+import Link from '../Link';
 import P from '../Paragraph';
-import { A } from '../Link';
-
-const Wrapper = styled.div`
-  display: block;
-  margin: 15px 0;
-  padding: 15px 0;
-  border-bottom: 1px dashed #ddd;
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin: -10px 0 5px 0;
-  font-size: 12px;
-`;
-
-const Li = styled.li`
-  margin-right: 10px;
-`;
+import { Li, Ul, Wrapper } from './Comment.styles';
 
 const Comment = ({ comment }) => (
   <Wrapper>
     <P>{comment.body}</P>
     <Ul>
       <Li>
-        <A href={`https://old.reddit.com/${comment.permalink}`} target="_blank">
+        <Link href={`https://old.reddit.com/${comment.permalink}`} target="_blank" type="a">
           permalink
-        </A>
+        </Link>
       </Li>
     </Ul>
   </Wrapper>

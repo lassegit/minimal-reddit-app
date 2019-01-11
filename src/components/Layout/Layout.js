@@ -1,25 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  display: flex;
-`;
-
-const Column1 = styled.div`
-  flex: 0 1 200px;
-  height: 99vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px;
-  left: 10px;
-`;
-
-const Column2 = styled.div`
-  flex: 0 1 700px;
-  margin-bottom: 50px;
-  min-height: 100vh;
-`;
+import { Column1, Column2, Wrapper } from './Layout.styles';
 
 const Layout = ({ column1, column2 }) => (
   <Wrapper>

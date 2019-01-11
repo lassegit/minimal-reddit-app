@@ -16,6 +16,7 @@ const H2 = styled.h2`
   ${baseStyles}
   font-size: 2rem;
 `;
+
 const H3 = styled.h3`
   ${baseStyles}
   font-size: 1.7rem;

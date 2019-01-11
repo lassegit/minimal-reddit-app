@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { A, Link } from '../Link';
+import Link from '../Link';
 
 const Wrapper = styled.div`
   display: block;
@@ -35,21 +35,23 @@ const Post = ({ post }) => {
 
   return (
     <Wrapper>
-      <A href={url} target="_blank" large>
+      <Link href={url} target="_blank" type="a" large>
         {title}
-      </A>
+      </Link>
       <Ul>
         <Li>{createdAt}</Li>
         <Li>
           <Link to={`/comments/${subreddit}/${id}`}>comments ({num_comments})</Link>
         </Li>
         <Li>
-          <A href={`https://old.reddit.com/user/${author}`} target="_blank">
+          <Link href={`https://old.reddit.com/user/${author}`} target="_blank" type="a">
             {author}
-          </A>
+          </Link>
         </Li>
         <Li>
-          <A href={`https://old.reddit.com/domain/${domain}/`}>{domain}</A>
+          <Link href={`https://old.reddit.com/domain/${domain}/`} type="a">
+            {domain}
+          </Link>
         </Li>
       </Ul>
     </Wrapper>

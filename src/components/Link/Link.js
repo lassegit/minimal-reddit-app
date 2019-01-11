@@ -1,34 +1,27 @@
-import styled, { css } from 'styled-components';
-import { Link as RouterLink, NavLink as RouterNavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { AStyled, LinkStyled, NavLinkStyled } from './Link.styles';
 
-const defaultStyles = css`
-  color: #1d97ff;
-  text-decoration: none;
-  &:visited {
-    color: #125d9c;
+const Link = props => {
+  const { type } = props;
+
+  if (type === 'a') {
+    return <AStyled {...props} />;
   }
 
-  &:hover {
-    text-decoration: underline;
+  if (type === 'nav') {
+    return <NavLinkStyled {...props} />;
   }
 
-  ${props =>
-    props.large &&
-    css`
-      font-size: 18px;
-    `}
-`;
+  return <LinkStyled {...props} />;
+};
 
-const NavLink = styled(RouterNavLink)`
-  ${defaultStyles}
-`;
+Link.defaultProps = {
+  type: 'link',
+};
 
-const Link = styled(RouterLink)`
-  ${defaultStyles}
-`;
+Link.propTypes = {
+  type: PropTypes.string,
+};
 
-const A = styled.a`
-  ${defaultStyles}
-`;
-
-export { Link, NavLink, A };
+export default Link;
