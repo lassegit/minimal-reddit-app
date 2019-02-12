@@ -18,7 +18,3 @@ export const POSTS_ERROR = 'POSTS_ERROR';
 export const SUB_ADD = 'SUB_ADD';
 export const SUB_REMOVE = 'SUB_REMOVE';
 export const SUBS_GET = 'SUBS_GET';
-
-/**
- * UI
- */

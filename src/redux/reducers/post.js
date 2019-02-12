@@ -10,18 +10,13 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case POSTS_REQUEST:
-      return Object.assign({}, { posts: [], sub: action.sub, isLoading: true, error: false });
-    case POSTS_SUCCESS:
-      return Object.assign(
-        {},
-        {
-          posts: action.posts.data.children.sort((a, b) => a.data.created_utc - b.data.created_utc).reverse(),
-          sub: action.sub,
-          isLoading: false,
-        },
-      );
+      return { ...state, posts: [], sub: action.sub, isLoading: true, error: false };
+    case POSTS_SUCCESS: {
+      const posts = action.posts.data.children.sort((a, b) => a.data.created_utc - b.data.created_utc).reverse();
+      return { ...state, posts, isLoading: false };
+    }
     case POSTS_ERROR:
-      return Object.assign({}, { posts: [], sub: action.sub, error: action.err.message, isLoading: false });
+      return { ...state, error: action.err.message, isLoading: false };
     default:
       return state;
   }

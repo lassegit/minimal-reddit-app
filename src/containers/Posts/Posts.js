@@ -59,12 +59,13 @@ class Posts extends React.Component {
 
 Posts.defaultProps = {
   error: null,
+  sub: '',
 };
 
 Posts.propTypes = {
   dispatch: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
-  sub: PropTypes.string.isRequired,
+  sub: PropTypes.string,
   match: PropTypes.shape({}).isRequired,
   posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
