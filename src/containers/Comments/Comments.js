@@ -8,6 +8,7 @@ import Link from '../../components/Link';
 import P from '../../components/Paragraph';
 import SubAdd from '../SubAdd';
 import SubList from '../SubList';
+import unescapeHTML from '../../utils/unescapeHTML';
 import { getComments } from '../../redux/actions/comment';
 import { H3 } from '../../components/Heading';
 import { Li, Ul } from './Comments.styles';
@@ -38,7 +39,7 @@ class Comments extends React.Component {
         />
       );
 
-    const { title, permalink, num_comments } = post;
+    const { title, selftext_html, permalink, num_comments } = post;
 
     return (
       <Layout
@@ -50,6 +51,7 @@ class Comments extends React.Component {
         column2={
           <React.Fragment>
             <H3>{title}</H3>
+            <p dangerouslySetInnerHTML={{ __html: unescapeHTML(selftext_html) }} />
             <Ul>
               <Li>{num_comments} comments</Li>
               <Li>

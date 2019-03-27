@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Link from '../Link';
-import P from '../Paragraph';
+import unescapeHTML from '../../utils/unescapeHTML';
 import { Li, Ul, Wrapper } from './Comment.styles';
 
 const Comment = ({ comment }) => (
   <Wrapper>
-    <P>{comment.body}</P>
+    <p dangerouslySetInnerHTML={{ __html: unescapeHTML(comment.body_html) }} />
     <Ul>
       <Li>
         <Link href={`https://old.reddit.com/${comment.permalink}`} target="_blank" type="a">

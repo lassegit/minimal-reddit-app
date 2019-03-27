@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     color: #f3f3f3;
     margin: 0;
     padding: 20px;
+    line-height: 1.6;
   }
 `;
 export default GlobalStyles;
