@@ -12,8 +12,8 @@ const defaultStyles = css`
     text-decoration: underline;
   }
 
-  ${props =>
-    props.large &&
+  ${({ large }) =>
+    large &&
     css`
       font-size: 18px;
     `}
