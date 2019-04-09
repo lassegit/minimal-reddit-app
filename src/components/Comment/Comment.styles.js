@@ -34,7 +34,12 @@ const CommentHTML = styled.code`
     }
   }
   p {
+    margin: 0 0 20px 0;
+  }
+  blockquote {
     margin: 0;
+    padding: 0 0 0 20px;
+    font-style: italic;
   }
 `;
 
