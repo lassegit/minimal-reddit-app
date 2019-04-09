@@ -9,7 +9,7 @@ const Column1 = styled.div`
   overflow: hidden;
   position: fixed;
   top: 25px;
-  left: 15px;
+  left: 20px;
 `;
 
 const Column2 = styled.div`

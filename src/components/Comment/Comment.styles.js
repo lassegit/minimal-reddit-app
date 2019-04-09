@@ -33,6 +33,9 @@ const CommentHTML = styled.code`
       color: ${({ theme }) => theme.link.visited};
     }
   }
+  p {
+    margin: 0;
+  }
 `;
 
 export { Wrapper, Ul, Li, CommentHTML };
