@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components';
 import { Link as RouterLink, NavLink as RouterNavLink } from 'react-router-dom';
 
 const defaultStyles = css`
-  color: #1d97ff;
+  color: ${({ theme }) => theme.link.main};
   text-decoration: none;
   &:visited {
-    color: #125d9c;
+    color: ${({ theme }) => theme.link.visited};
   }
 
   &:hover {

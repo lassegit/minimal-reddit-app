@@ -9,6 +9,7 @@ import P from '../../components/Paragraph';
 import SubAdd from '../SubAdd';
 import SubList from '../SubList';
 import unescapeHTML from '../../utils/unescapeHTML';
+import { CommentHTML } from '../../components/Comment/Comment.styles';
 import { getComments } from '../../redux/actions/comment';
 import { H3 } from '../../components/Heading';
 import { Li, Ul } from './Comments.styles';
@@ -51,7 +52,7 @@ class Comments extends React.Component {
         column2={
           <React.Fragment>
             <H3>{title}</H3>
-            <p dangerouslySetInnerHTML={{ __html: unescapeHTML(selftext_html) }} />
+            {selftext_html && <CommentHTML dangerouslySetInnerHTML={{ __html: unescapeHTML(selftext_html) }} />}
             <Ul>
               <Li>{num_comments} comments</Li>
               <Li>
