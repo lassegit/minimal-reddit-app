@@ -1,5 +1,5 @@
-import { call, put } from 'redux-saga/effects';
 import api from '../../utils/api';
+import { call, put } from 'redux-saga/effects'; // eslint-disable-line
 import { REDDIT_URL } from '../../utils/constants';
 
 export function* getPosts(action) {
