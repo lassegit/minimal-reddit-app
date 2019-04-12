@@ -1,11 +1,11 @@
 {
-  "main.js": "/minimal-reddit-app/static/js/main.164a3f4d.chunk.js",
-  "main.js.map": "/minimal-reddit-app/static/js/main.164a3f4d.chunk.js.map",
-  "static/js/1.27daa582.chunk.js": "/minimal-reddit-app/static/js/1.27daa582.chunk.js",
-  "static/js/1.27daa582.chunk.js.map": "/minimal-reddit-app/static/js/1.27daa582.chunk.js.map",
+  "main.js": "/minimal-reddit-app/static/js/main.6b4b1569.chunk.js",
+  "main.js.map": "/minimal-reddit-app/static/js/main.6b4b1569.chunk.js.map",
+  "static/js/1.e83c6067.chunk.js": "/minimal-reddit-app/static/js/1.e83c6067.chunk.js",
+  "static/js/1.e83c6067.chunk.js.map": "/minimal-reddit-app/static/js/1.e83c6067.chunk.js.map",
   "runtime~main.js": "/minimal-reddit-app/static/js/runtime~main.b721781e.js",
   "runtime~main.js.map": "/minimal-reddit-app/static/js/runtime~main.b721781e.js.map",
   "index.html": "/minimal-reddit-app/index.html",
-  "precache-manifest.7f2917aa6366773a920772d397335f5c.js": "/minimal-reddit-app/precache-manifest.7f2917aa6366773a920772d397335f5c.js",
+  "precache-manifest.c40a81c3f618eeaf33a68c97f2f69e7c.js": "/minimal-reddit-app/precache-manifest.c40a81c3f618eeaf33a68c97f2f69e7c.js",
   "service-worker.js": "/minimal-reddit-app/service-worker.js"
 }
