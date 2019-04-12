@@ -10,14 +10,13 @@ import SubAdd from '../SubAdd';
 import SubList from '../SubList';
 import unescapeHTML from '../../utils/unescapeHTML';
 import { CommentHTML } from '../../components/Comment/Comment.styles';
-import { getComments } from '../../redux/actions/comment';
 import { H3 } from '../../components/Heading';
 import { Li, Ul } from './Comments.styles';
 
 class Comments extends React.Component {
   componentDidMount() {
     const { dispatch, match } = this.props;
-    dispatch(getComments(match.params.sub, match.params.id));
+    dispatch({ type: 'COMMENTS_REQUEST', sub: match.params.sub, id: match.params.id });
   }
 
   render() {

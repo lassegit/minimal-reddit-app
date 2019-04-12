@@ -7,9 +7,7 @@ import P from '../../components/Paragraph';
 import Post from '../../components/Post';
 import SubAdd from '../SubAdd';
 import SubList from '../SubList';
-import { getPosts } from '../../redux/actions/post';
 import { H3 } from '../../components/Heading';
-import { removeSub } from '../../redux/actions/sub';
 
 class Posts extends React.Component {
   componentDidMount() {
@@ -17,7 +15,7 @@ class Posts extends React.Component {
     const { id } = match.params;
 
     if (id !== sub) {
-      dispatch(getPosts(id));
+      dispatch({ type: 'POSTS_REQUEST', payload: { id } });
     }
   }
 
@@ -26,7 +24,7 @@ class Posts extends React.Component {
     const { id } = match.params;
 
     if (id !== prevProps.match.params.id && id !== sub) {
-      dispatch(getPosts(id));
+      dispatch({ type: 'POSTS_REQUEST', payload: { id } });
     }
   }
 
@@ -44,7 +42,8 @@ class Posts extends React.Component {
           column2={
             <React.Fragment>
               <H3>
-                /r/{match.params.id} <Button onClick={() => dispatch(removeSub(match.params.id))}>Remove</Button>
+                /r/{match.params.id}{' '}
+                <Button onClick={() => dispatch({ type: 'SUB_REMOVE', sub: match.params.id })}>Remove</Button>
               </H3>
               <P>{isLoading && 'Loading'}</P>
               <P>{error && error}</P>

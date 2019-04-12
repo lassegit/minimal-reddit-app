@@ -3,7 +3,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
-import { addSub } from '../../redux/actions/sub';
 
 class SubAdd extends React.Component {
   constructor() {
@@ -19,7 +18,7 @@ class SubAdd extends React.Component {
 
     if (!value) return;
 
-    dispatch(addSub(value));
+    dispatch({ type: 'SUB_ADD', sub: value });
     this.setState({ value: '' });
   }
 
