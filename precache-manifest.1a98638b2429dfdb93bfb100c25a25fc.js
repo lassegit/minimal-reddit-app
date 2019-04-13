@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/minimal-reddit-app/static/js/1.e83c6067.chunk.js"
   },
   {
-    "revision": "2a0b820f55d76d03c4b5a83c5d9b2934",
+    "revision": "a58abf22c4bb7fd7e8860b085e100691",
     "url": "/minimal-reddit-app/index.html"
   }
 ];
