@@ -16,7 +16,9 @@ class SubAdd extends React.Component {
     const { dispatch } = this.props;
     const { value } = this.state;
 
-    if (!value) return;
+    if (!value) {
+      return;
+    }
 
     dispatch({ type: 'SUB_ADD', sub: value });
     this.setState({ value: '' });
