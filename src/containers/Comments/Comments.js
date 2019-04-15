@@ -6,8 +6,6 @@ import Comment from '../../components/Comment';
 import Layout from '../../components/Layout';
 import Link from '../../components/Link';
 import P from '../../components/Paragraph';
-import SubAdd from '../SubAdd';
-import SubList from '../SubList';
 import unescapeHTML from '../../utils/unescapeHTML';
 import { CommentHTML } from '../../components/Comment/Comment.styles';
 import { H3 } from '../../components/Heading';
@@ -25,11 +23,6 @@ class Comments extends React.Component {
     if (isLoading || error)
       return (
         <Layout
-          column1={
-            <React.Fragment>
-              <SubAdd /> <SubList />
-            </React.Fragment>
-          }
           column2={
             <React.Fragment>
               <P>{isLoading && 'Loading comments…'}</P>
@@ -43,11 +36,6 @@ class Comments extends React.Component {
 
     return (
       <Layout
-        column1={
-          <React.Fragment>
-            <SubAdd /> <SubList />
-          </React.Fragment>
-        }
         column2={
           <React.Fragment>
             <H3>{title}</H3>

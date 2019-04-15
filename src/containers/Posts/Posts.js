@@ -5,8 +5,6 @@ import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 import P from '../../components/Paragraph';
 import Post from '../../components/Post';
-import SubAdd from '../SubAdd';
-import SubList from '../SubList';
 import { H3 } from '../../components/Heading';
 
 class Posts extends React.Component {
@@ -34,11 +32,6 @@ class Posts extends React.Component {
     return (
       <div>
         <Layout
-          column1={
-            <React.Fragment>
-              <SubAdd /> <SubList />
-            </React.Fragment>
-          }
           column2={
             <React.Fragment>
               <H3>

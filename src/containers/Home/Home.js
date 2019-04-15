@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 import Layout from '../../components/Layout';
 import P from '../../components/Paragraph';
-import SubAdd from '../SubAdd';
-import SubList from '../SubList';
 import { H1 } from '../../components/Heading';
 
 const Home = ({ sub }) => {
@@ -17,11 +15,6 @@ const Home = ({ sub }) => {
   return (
     <>
       <Layout
-        column1={
-          <>
-            <SubAdd /> <SubList />
-          </>
-        }
         column2={
           <>
             <H1>Casually read the most popular posts on selected subreddits</H1>
