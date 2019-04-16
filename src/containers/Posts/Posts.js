@@ -51,7 +51,6 @@ const Posts = props => {
 
 Posts.defaultProps = {
   error: null,
-  sub: '',
 };
 
 Posts.propTypes = {
