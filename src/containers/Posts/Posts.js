@@ -30,10 +30,6 @@ const Posts = props => {
     );
   }
 
-  if (error) {
-    return <Layout column2={<P>{error}</P>} />;
-  }
-
   return (
     <div>
       <Layout
@@ -42,6 +38,7 @@ const Posts = props => {
             <H3>
               /r/{id} <Button onClick={() => dispatch({ type: 'SUB_REMOVE', sub: id })}>Remove</Button>
             </H3>
+            {error && <P>{error}</P>}
             {posts.map((item, index) => (
               <Post key={index} post={item.data} />
             ))}
