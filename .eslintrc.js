@@ -21,7 +21,7 @@ module.exports = {
       'error',
       {
         singleQuote: true,
-        printWidth: 125,
+        printWidth: 135,
         trailingComma: 'all',
         semi: true,
       },
