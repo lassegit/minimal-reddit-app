@@ -20,7 +20,7 @@ const Posts = ({ posts, activeSubId, match, isLoading, dispatch, error }) => {
   );
 
   if (isLoading) {
-    return <Layout column2={<H3>Loading posts from "{id}"…</H3>} />;
+    return <Layout column2={<H3>Loading posts from &quot;{id}&quot;…</H3>} />;
   }
 
   return (
