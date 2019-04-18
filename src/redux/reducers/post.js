@@ -1,6 +1,6 @@
 const initialState = {
   posts: [],
-  sub: '',
+  activeSubId: '',
   isLoading: false,
   error: null,
 };
@@ -8,7 +8,7 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case 'POSTS_REQUEST':
-      return { ...state, posts: [], sub: action.sub, isLoading: true, error: false };
+      return { ...state, posts: [], activeSubId: action.payload.id, isLoading: true, error: false };
     case 'POSTS_SUCCESS': {
       const posts = action.data.data.children.sort((a, b) => a.data.created_utc - b.data.created_utc).reverse();
       return { ...state, posts, isLoading: false };

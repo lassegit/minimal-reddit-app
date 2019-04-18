@@ -13,14 +13,14 @@ import { Li, Ul } from './Comments.styles';
 
 const Comments = ({ comments, post, isLoading, error, dispatch, match }) => {
   const { title, selftext_html, permalink, num_comments } = post;
+  const { sub, id } = match.params;
 
   useEffect(() => {
-    const { sub, id } = match.params;
     dispatch({ type: 'COMMENTS_REQUEST', sub, id });
   }, []);
 
   if (isLoading) {
-    return <Layout column2={<P>Loading comments…</P>} />;
+    return <Layout column2={<H3>Loading comments…</H3>} />;
   }
 
   if (error) {

@@ -7,27 +7,20 @@ import P from '../../components/Paragraph';
 import Post from '../../components/Post';
 import { H3 } from '../../components/Heading';
 
-const Posts = props => {
-  const { match, isLoading, posts, dispatch, error } = props;
+const Posts = ({ posts, activeSubId, match, isLoading, dispatch, error }) => {
   const { id } = match.params;
 
   useEffect(
     () => {
-      dispatch({ type: 'POSTS_REQUEST', payload: { id } });
+      if (id !== activeSubId) {
+        dispatch({ type: 'POSTS_REQUEST', payload: { id } });
+      }
     },
     [id],
   );
 
   if (isLoading) {
-    return (
-      <Layout
-        column2={
-          <H3>
-            Loading posts from <i>{id}</i>
-          </H3>
-        }
-      />
-    );
+    return <Layout column2={<H3>Loading posts from "{id}"…</H3>} />;
   }
 
   return (
@@ -59,10 +52,12 @@ Posts.propTypes = {
   match: PropTypes.shape({}).isRequired,
   posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  activeSubId: PropTypes.string.isRequired,
 };
 
 export default connect(state => ({
   posts: state.post.posts,
+  activeSubId: state.post.activeSubId,
   isLoading: state.post.isLoading,
   error: state.post.error,
 }))(Posts);
