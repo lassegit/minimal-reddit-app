@@ -24,7 +24,7 @@ const Li = styled.li`
   margin-right: 10px;
 `;
 
-const Post = ({ post }) => {
+const Post = React.memo(({ post }) => {
   const { id, subreddit, url, title, created_utc, domain, author, num_comments } = post;
   const createdAt = new Date(created_utc * 1000).toLocaleDateString(navigator.language || navigator.userLanguage, {
     weekday: 'long',
@@ -56,7 +56,7 @@ const Post = ({ post }) => {
       </Ul>
     </Wrapper>
   );
-};
+});
 
 Post.propTypes = {
   post: PropTypes.shape({
