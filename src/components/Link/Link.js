@@ -2,18 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { AStyled, LinkStyled, NavLinkStyled } from './Link.styles';
 
-const Link = props => {
-  const { type } = props;
-
+const Link = ({ type, ...rest }) => {
   if (type === 'a') {
-    return <AStyled {...props} />;
+    return <AStyled {...rest} />;
   }
 
   if (type === 'nav') {
-    return <NavLinkStyled {...props} />;
+    return <NavLinkStyled {...rest} />;
   }
 
-  return <LinkStyled {...props} />;
+  return <LinkStyled {...rest} />;
 };
 
 Link.defaultProps = {
