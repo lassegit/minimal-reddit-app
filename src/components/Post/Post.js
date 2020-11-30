@@ -44,12 +44,12 @@ const Post = React.memo(({ post }) => {
           <Link to={`/comments/${subreddit}/${id}`}>comments ({num_comments})</Link>
         </Li>
         <Li>
-          <Link href={`https://old.reddit.com/user/${author}`} target="_blank" type="a">
+          <Link href={`https://reddit.com/user/${author}`} target="_blank" type="a">
             {author}
           </Link>
         </Li>
         <Li>
-          <Link href={`https://old.reddit.com/domain/${domain}/`} type="a">
+          <Link href={`https://reddit.com/domain/${domain}/`} type="a">
             {domain}
           </Link>
         </Li>

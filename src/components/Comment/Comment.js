@@ -9,7 +9,7 @@ const Comment = ({ comment }) => (
     <CommentHTML dangerouslySetInnerHTML={{ __html: unescapeHTML(comment.body_html) }} />
     <Ul>
       <Li>
-        <Link href={`https://old.reddit.com/${comment.permalink}`} target="_blank" type="a">
+        <Link href={`https://reddit.com/${comment.permalink}`} target="_blank" type="a">
           permalink
         </Link>
       </Li>

@@ -36,7 +36,7 @@ const Comments = ({ comments, post, isLoading, error, dispatch, match }) => {
           <Ul>
             <Li>{num_comments} comments</Li>
             <Li>
-              <Link href={`https://old.reddit.com/${permalink}`} target="_blank" type="a">
+              <Link href={`https://reddit.com/${permalink}`} target="_blank" type="a">
                 permalink
               </Link>
             </Li>
